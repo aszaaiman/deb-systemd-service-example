@@ -1,0 +1,5 @@
+Package: httphello
+Version: 1.0
+Architecture: amd64
+Maintainer: Abri Zaaiman <aszaaiman@gmail.com>
+Description: A program that greets you.

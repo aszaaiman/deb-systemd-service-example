@@ -1,0 +1,13 @@
+[Unit]
+AssertPathExists=/usr/bin/httphello
+
+[Service]
+WorkingDirectory=~
+ExecStart=/usr/bin/httphello
+Restart=always
+PrivateTmp=true
+NoNewPrivileges=true
+
+[Install]
+Alias=httphello
+WantedBy=default.target

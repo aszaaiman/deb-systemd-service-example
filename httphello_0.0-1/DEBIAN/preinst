@@ -1,0 +1,14 @@
+echo "Looking for old versions of httphello..."
+
+echo "Attempting to old stop httphello.service"
+sudo systemctl stop httphello.service
+
+if [ -f "/usr/bin/httphello" ];then
+    sudo rm -f /usr/bin/httphello
+    echo "Removed old httphello from /usr/bin..."
+fi
+
+if [ -f "/etc/systemd/system/httphello.service" ];then    
+    sudo rm -rf /etc/systemd/system/httphello.service
+    echo "Removed old httphello.service"
+fi
